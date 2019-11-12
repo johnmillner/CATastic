@@ -17,9 +17,6 @@ public class CartService {
   }
 
   public Cart getCart(String cartId) throws IOException {
-    if(!carts.containsKey(cartId)) {
-      throw new IOException("cart Id was not found: "+cartId);
-    }
     return carts.get(cartId);
   }
 }
