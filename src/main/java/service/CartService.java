@@ -13,10 +13,13 @@ public class CartService {
   public UUID createService() {
     UUID uuid = UUID.randomUUID();
     carts.put(uuid, new Cart());
+    System.out.println("carts"+carts);
     return uuid;
   }
 
   public Cart getCart(String cartId) throws IOException {
+    System.out.println("carts"+carts);
+
     return carts.get(cartId);
   }
 }
