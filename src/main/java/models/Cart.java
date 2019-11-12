@@ -1,9 +1,10 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Cart extends JsonSerializable<Cart> {
-  private List<Product> products;
+  private List<Product> products = new ArrayList<>();
 
   public List<Product> getProducts() {
     return products;
