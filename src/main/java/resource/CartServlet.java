@@ -25,8 +25,10 @@ public class CartServlet extends HttpServlet {
   @Override
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("application/json");
+    System.out.println(resp.getWriter());
     resp.getWriter().write(getCart(req.getHeader("cartId")).toString());
   }
+
   public Cart getCart(String cartId) throws IOException {
     return cartService.getCart(cartId);
   }
