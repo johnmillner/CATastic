@@ -18,8 +18,8 @@
   <packaging>war</packaging>
   <version>1.0</version>
 
-  <groupId>com.google.appengine.demos</groupId>
-  <artifactId>appengine-try-java</artifactId>
+  <groupId>com.disney.catastic</groupId>
+  <artifactId>catastic</artifactId>
 
   <!-- Parent POM defines common plugins and properties. -->
   <parent>
@@ -45,12 +45,59 @@
       <artifactId>appengine-api-1.0-sdk</artifactId>
       <version>${appengine.target.version}</version>
     </dependency>
+
+    <!-- Apache CXF -->
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
+      <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+      <groupId>org.apache.cxf</groupId>
+      <version>3.3.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.webjars</groupId>
+      <artifactId>swagger-ui</artifactId>
+      <version>3.24.0</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>cxf-spring-boot-starter-jaxrs</artifactId>
+      <groupId>org.apache.cxf</groupId>
+      <version>3.3.3</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-web-services</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>2.1.9.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <version>2.2.0.RELEASE</version>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <version>2.2.0.RELEASE</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>junit</artifactId>
+          <groupId>junit</groupId>
+        </exclusion>
+      </exclusions>
+      <groupId>org.springframework.boot</groupId>
+
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <artifactId>jackson-jaxrs-json-provider</artifactId>
+      <groupId>com.fasterxml.jackson.jaxrs</groupId>
+      <version>2.10.0</version>
+    </dependency>
+
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -59,10 +106,10 @@
 
     <!-- Test Dependencies -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13-beta-2</version>
+      <artifactId>junit-jupiter</artifactId>
+      <groupId>org.junit.jupiter</groupId>
       <scope>test</scope>
+      <version>5.5.2</version>
     </dependency>
     <dependency>
       <groupId>org.mockito</groupId>
