@@ -14,7 +14,7 @@ public class CartServlet extends HttpServlet {
 
   @Override
   public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    resp.setContentType("text/plain");
+    resp.setContentType("application/json");
     resp.getWriter().write(createCart().toString());
   }
 
@@ -22,6 +22,11 @@ public class CartServlet extends HttpServlet {
     return cartService.createService();
   }
 
+  @Override
+  public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    resp.setContentType("application/json");
+    resp.getWriter().write(getCart(req.getHeader("cartId")).toString());
+  }
   public Cart getCart(String cartId) throws IOException {
     return cartService.getCart(cartId);
   }

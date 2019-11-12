@@ -2,7 +2,7 @@ package models;
 
 import java.util.UUID;
 
-public class Product {
+public class Product extends JsonSerializable<Product> {
   private String name;
   private String image;
   private String description;

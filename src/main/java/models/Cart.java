@@ -2,7 +2,7 @@ package models;
 
 import java.util.List;
 
-public class Cart {
+public class Cart extends JsonSerializable<Cart> {
   private List<Product> products;
 
   public List<Product> getProducts() {
