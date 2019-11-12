@@ -31,4 +31,10 @@ public class CartServlet extends HttpServlet {
   public Cart getCart(String cartId) throws IOException {
     return cartService.getCart(cartId);
   }
+
+  @Override
+  public void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    cartService.remove(req.getHeader("cartId"));
+
+  }
 }

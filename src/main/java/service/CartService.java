@@ -22,4 +22,8 @@ public class CartService {
 
     return carts.get(UUID.fromString(cartId));
   }
+
+  public void remove(String cartId) {
+    carts.remove(UUID.fromString(cartId));
+  }
 }
