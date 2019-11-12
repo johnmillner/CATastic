@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package myapp;
+package resource;
 
 import java.io.IOException;
 import javax.servlet.http.HttpServlet;

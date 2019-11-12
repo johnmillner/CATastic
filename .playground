@@ -2,7 +2,8 @@
   "project_name": "Hello World - Java",
   "project_description": "Starter code for a Google App Engine app in Java.",
   "show_files": [
-    "src/main/java/myapp/DemoServlet.java",
+    "src/main/java/resource/DemoServlet.java",
+    "src/main/java/resource/CartServlet.java",
     "build.xml",
     "pom.xml",
     "src/main/webapp/index.html",
