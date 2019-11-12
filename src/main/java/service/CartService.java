@@ -20,6 +20,6 @@ public class CartService {
   public Cart getCart(String cartId) throws IOException {
     System.out.println("carts"+carts);
 
-    return carts.get(cartId);
+    return carts.get(UUID.fromString(cartId));
   }
 }
