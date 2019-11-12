@@ -15,7 +15,7 @@ public class CartServlet extends HttpServlet {
   @Override
   public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("application/json");
-    resp.getWriter().write(createCart().toString());
+    resp.getWriter().println(createCart().toString());
   }
 
   public UUID createCart() {
@@ -26,7 +26,7 @@ public class CartServlet extends HttpServlet {
   public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     resp.setContentType("application/json");
     System.out.println(resp.getWriter());
-    resp.getWriter().write(getCart(req.getHeader("cartId")).toString());
+    resp.getWriter().println(getCart(req.getHeader("cartId")).toString());
   }
 
   public Cart getCart(String cartId) throws IOException {
